@@ -83,31 +83,52 @@ gsap.fromTo(
       start: "15%",
       end: "20%",
     },
-    onComplete: () =>{
-        gsap.to("#head", {
-            opacity: 0,
-        })
-    }
+    onComplete: () => {
+      gsap.to("#head", {
+        opacity: 0,
+      });
+    },
   }
 );
 
 gsap.fromTo(
-  ".card",
+  "#card-first",
   {
     opacity: 0,
-  },{
+    scale: 0.2,
+  },
+  {
     opacity: 1,
+    scale: 1,
     scrollTrigger: {
       scrub: true,
       start: "40%",
       end: "80%",
     },
     onComplete: () => {
-      gsap.to(
-        '.card',{
-          opacity: 1,
-        }
-      )
-    }
+      gsap.to("#card-first", {
+        opacity: 0,
+      });
+    },
   }
+);
+
+gsap.fromTo(
+  "#card-sec",{
+  opacity: 0,
+},{
+  opacity: 1,
+  scrollTrigger:{
+    scrub: true,
+    start: "top top",
+    end: "+=700",
+  },
+  onComplete: () => {
+    gsap.to("#card-sec", {
+      opacity: 0,
+    })
+  }
+}
 )
+
+// console.log(window.location);
