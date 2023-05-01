@@ -90,3 +90,24 @@ gsap.fromTo(
     }
   }
 );
+
+gsap.fromTo(
+  ".card",
+  {
+    opacity: 0,
+  },{
+    opacity: 1,
+    scrollTrigger: {
+      scrub: true,
+      start: "40%",
+      end: "80%",
+    },
+    onComplete: () => {
+      gsap.to(
+        '.card',{
+          opacity: 1,
+        }
+      )
+    }
+  }
+)

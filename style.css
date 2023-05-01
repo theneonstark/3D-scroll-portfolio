@@ -63,6 +63,16 @@ canvas {
      min-height: 100vh;
 }
 
+.card{
+    width: 20rem;
+    transform: translate(5rem, -4rem);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  10px 10px 32px #a6a6a6,
+                 -10px -10px 32px #ffffff;
+}
+
 @keyframes textflow{
     0%{
         left: 100%;
